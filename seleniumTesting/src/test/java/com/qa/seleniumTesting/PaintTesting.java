@@ -30,9 +30,16 @@ public class PaintTesting {
 	{
 		driver.get("https://www.youidraw.com/apps/painter/");
 		Actions action = new Actions(driver); 
-		action.moveByOffset(150,0).perform();
-		action.moveByOffset(150, -200).release().perform();
-		action.moveByOffset(0,150 ).release().perform();
+		action.clickAndHold(); 
+		action.moveByOffset(200,200).clickAndHold().moveByOffset(-150,0).release().perform();
+		
+		action.moveByOffset(75,0).clickAndHold().moveByOffset(0,200).release().perform();
+		
+		
+		//action.moveByOffset(150, 0).clickAndHold().release().perform();
+		//action.moveByOffset(0,150 ).release().perform();
+		//action.moveByOffset(200, 150).clickAndHold().perform();
+		//action.moveByOffset(0,150 ).release().perform();
 	}
 	
 	
@@ -40,7 +47,7 @@ public class PaintTesting {
 	@After 
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 	
 	
