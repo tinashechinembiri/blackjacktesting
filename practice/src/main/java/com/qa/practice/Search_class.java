@@ -26,6 +26,7 @@ public class Search_class {
 		
 		// example for future 
 		// assertFalse(results.getText().contains(searchResult + " may refer to:"));
+		 //assertTrue(results.getText().startsWith(searchResult));
 	}
 	
 
